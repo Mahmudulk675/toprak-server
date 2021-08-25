@@ -7,7 +7,7 @@ router.post("/add-review", async (req, res) => {
     try {
       // Create new user
       const newReview = await new Review(req.body);
-  
+
       //   save and return response
       const review = await newReview.save();
       res.status(200).json(review);
